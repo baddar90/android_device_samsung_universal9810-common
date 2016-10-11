@@ -73,6 +73,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
