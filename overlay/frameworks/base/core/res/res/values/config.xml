@@ -141,4 +141,5 @@
     <bool name="config_cellBroadcastAppLinks">true</bool>
     <string name="config_radio_access_family">GSM|WCDMA|LTE</string>
     <bool name="config_animateScreenLights">true</bool>
+    <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
 </resources>
