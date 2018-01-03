@@ -151,4 +151,5 @@
     <integer-array name="config_keyboardTapVibePattern">
         <item>7</item>
     </integer-array>
+    <bool name="config_setColorTransformAccelerated">true</bool>
 </resources>
