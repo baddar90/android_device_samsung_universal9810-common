@@ -45,5 +45,6 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
+extract "$MY_DIR"/proprietary-files-vndk.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh
