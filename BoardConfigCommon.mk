@@ -53,6 +53,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := sdfat
+
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/etc/recovery.fstab
