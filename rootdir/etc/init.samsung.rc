@@ -2,6 +2,9 @@ on init
     # Disable vendor overlay
     mount none /vendor/lost+found /vendor/overlay bind
 
+    # Override vendor usb_audio_policy_configuration
+    mount none /system/etc/usb_audio_policy_configuration.xml /vendor/etc/usb_audio_policy_configuration.xml bind
+
     # MirrorLink permission
     mkdir /dev/socket/mlaudio 0770 audioserver system
 
