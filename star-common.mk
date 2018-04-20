@@ -27,7 +27,14 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.samsungexynos9810
+    fstab.samsungexynos9810 \
+    init.samsung.rc \
+    init.samsungexynos9810.rc \
+    init.samsungexynos9810.usb.rc \
+    init.baseband.rc \
+    init.gps.rc \
+    init.wifi.rc \
+    ueventd.samsungexynos9810.rc
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
