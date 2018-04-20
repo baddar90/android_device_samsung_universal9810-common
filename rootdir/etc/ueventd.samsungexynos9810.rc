@@ -191,3 +191,20 @@
 
 # ASTC HW encoder
 /dev/astc                 0644   root       root
+
+# From ueventd.rc
+/dev/ovr*                 0664   root       system
+/dev/uhid                 0660   system     bluetooth
+/dev/power_on_alarm       0660   system     radio
+
+# MobiCore
+/dev/mobicore             0700   system     system
+/dev/mobicore-user        0666   radio     system
+
+# Secure MEM driver
+/dev/s5p-smem             0660   system     system
+
+# Fingerprint Sensor
+/dev/vfsspi               0660   system     system
+/dev/esfp0                0660   system     system
+/dev/goodix_fp            0660   system     system
