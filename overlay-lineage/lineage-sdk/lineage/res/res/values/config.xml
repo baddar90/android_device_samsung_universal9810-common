@@ -5,4 +5,6 @@
 -->
 <resources>
     <integer name="config_deviceLightCapabilities">11</integer>
+    <integer name="config_deviceHardwareKeys">73</integer>
+    <integer name="config_deviceHardwareWakeKeys">73</integer>
 </resources>
