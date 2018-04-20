@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2018 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <bool name="config_showNavigationBar">true</bool>
+    <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>2999</item>
+        <item>3000</item>
+        <item>3999</item>
+        <item>4000</item>
+        <item>4999</item>
+        <item>5000</item>
+        <item>9999</item>
+        <item>10000</item>
+        <item>19999</item>
+        <item>20000</item>
+        <item>29999</item>
+        <item>30000</item>
+        <item>39999</item>
+        <item>40000</item>
+        <item>49999</item>
+        <item>50000</item>
+        <item>59999</item>
+        <item>60000</item>
+        <item>79999</item>
+        <item>80000</item>
+        <item>99999</item>
+        <item>100000</item>
+    </integer-array>
+    <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>22</item>
+        <item>25</item>
+        <item>28</item>
+        <item>33</item>
+        <item>35</item>
+        <item>37</item>
+        <item>49</item>
+        <item>64</item>
+        <item>64</item>
+        <item>65</item>
+        <item>67</item>
+        <item>72</item>
+        <item>98</item>
+        <item>145</item>
+        <item>145</item>
+        <item>163</item>
+        <item>163</item>
+        <item>172</item>
+        <item>172</item>
+        <item>181</item>
+        <item>181</item>
+        <item>191</item>
+        <item>191</item>
+        <item>200</item>
+        <item>200</item>
+        <item>209</item>
+        <item>209</item>
+        <item>218</item>
+        <item>218</item>
+        <item>227</item>
+        <item>227</item>
+        <item>236</item>
+        <item>236</item>
+        <item>245</item>
+        <item>245</item>
+        <item>255</item>
+    </integer-array>
+    <bool name="config_automatic_brightness_available">true</bool>
+    <integer name="config_screenBrightnessSettingMinimum">0</integer>
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessSettingDefault">124</integer>
+    <integer name="config_screenBrightnessDim">59</integer>
+    <bool name="config_hotswapCapable">true</bool>
+    <string-array translatable="false" name="config_tether_usb_regexs">
+        <item>"usb\\d"</item>
+        <item>"rndis\\d"</item>
+    </string-array>
+    <string-array translatable="false" name="config_tether_wifi_regexs">
+        <item>"wlan0"</item>
+        <item>"softap.*"</item>
+    </string-array>
+    <string-array translatable="false" name="config_tether_bluetooth_regexs">
+        <item>"bt-pan"</item>
+    </string-array>
+    <integer-array translatable="false" name="config_tether_upstream_types">
+        <item>0</item>
+        <item>1</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+    <string-array name="config_mobile_tcp_buffers">
+        <item>lte:1048576,3145728,4194304,524288,1572864,2097152</item>
+    </string-array>
+    <bool name="config_enableWifiDisplay">true</bool>
+    <integer name="config_wifi_idle_receive_cur_ma">1</integer>
+    <integer name="config_wifi_active_rx_cur_ma">65</integer>
+    <integer name="config_wifi_tx_cur_ma">265</integer>
+    <integer name="config_wifi_operating_voltage_mv">3600</integer>
+    <bool name="config_intrusiveNotificationLed">true</bool>
+    <bool name="config_enableAutoPowerModes">true</bool>
+    <bool name="config_freeformWindowManagement">true</bool>
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/arm64/boot-framework.vdex"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/oat/arm64/services.vdex"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/arm64/boot.vdex"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+        <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
+    </string-array>
+    <bool name="config_pinnerCameraApp">true</bool>
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
+    <bool name="config_cellBroadcastAppLinks">true</bool>
+    <string name="config_radio_access_family">GSM|WCDMA|LTE</string>
+</resources>
