@@ -117,6 +117,7 @@
     <bool name="config_dozeAfterScreenOff">true</bool>
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
     <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_enableBurnInProtection">true</bool>
     <integer name="config_screenBrightnessDoze">22</integer>
     <bool name="config_freeformWindowManagement">true</bool>
     <bool name="config_useDevInputEventForAudioJack">true</bool>
