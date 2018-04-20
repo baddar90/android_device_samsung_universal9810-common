@@ -118,5 +118,8 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_HARDWARE_CLASS := \
     hardware/samsung/lineagehw
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
 # Inherit from the proprietary version
 -include vendor/samsung/star-common/BoardConfigVendor.mk
