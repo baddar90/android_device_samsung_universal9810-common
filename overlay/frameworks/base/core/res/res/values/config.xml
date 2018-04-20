@@ -142,4 +142,13 @@
     <string name="config_radio_access_family">GSM|WCDMA|LTE</string>
     <bool name="config_animateScreenLights">true</bool>
     <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
+    <integer-array name="config_longPressVibePattern">
+        <item>7</item>
+    </integer-array>
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>7</item>
+    </integer-array>
+    <integer-array name="config_keyboardTapVibePattern">
+        <item>7</item>
+    </integer-array>
 </resources>
