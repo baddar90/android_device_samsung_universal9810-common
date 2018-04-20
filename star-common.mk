@@ -25,6 +25,10 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.samsungexynos9810
+
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
