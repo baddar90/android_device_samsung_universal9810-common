@@ -51,7 +51,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-TARGET_USES_MKE2FS := true
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
