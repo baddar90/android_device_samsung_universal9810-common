@@ -123,6 +123,8 @@
     <bool name="config_dozePulsePickup">true</bool>
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
     <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
     <bool name="config_enableBurnInProtection">true</bool>
     <integer name="config_screenBrightnessDoze">22</integer>
     <bool name="config_freeformWindowManagement">true</bool>
