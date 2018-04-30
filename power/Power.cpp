@@ -35,9 +35,8 @@ Power::Power() {
 
 // Methods from ::android::hardware::power::V1_0::IPower follow.
 Return<void> Power::setInteractive(bool interactive) {
-    WriteStringToFile(interactive ? "1" : "0", "/sys/devices/system/cpu/cpu6/online", false);
-    WriteStringToFile(interactive ? "1" : "0", "/sys/devices/system/cpu/cpu7/online", false);
-    WriteStringToFile(interactive ? "2314000" : "1690000", "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq", false);
+    WriteStringToFile(interactive ? "8" : "6", "/sys/power/cpuhotplug/max_online_cpu", false);
+    WriteStringToFile(interactive ? "2314000" : "1690000", "/sys/power/cpufreq_max_limit", false);
     return Void();
 }
 
