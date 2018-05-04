@@ -1,3 +1,6 @@
+# Audio
+/system/bin/audioloader u:object_r:audioloader_exec:s0
+
 # Bluetooth
 /sys/devices/platform/bluetooth/rfkill/rfkill0/state    u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices/platform/bluetooth/rfkill/rfkill0/type    u:object_r:sysfs_bluetooth_writable:s0

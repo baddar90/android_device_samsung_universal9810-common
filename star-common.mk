@@ -55,6 +55,9 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
+PRODUCT_PACKAGES += \
+    libshim_audio \
+    audioloader
 
 # Bluetooth
 PRODUCT_PACKAGES += \

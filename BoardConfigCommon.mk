@@ -108,6 +108,10 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/hw/audio.primary.universal9810.so|libshim_audio.so
+
 # Include
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
