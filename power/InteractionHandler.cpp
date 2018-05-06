@@ -63,16 +63,10 @@ void InteractionHandler::Exit() {
 
 void InteractionHandler::PerfLock() {
     ALOGV("%s: acquiring perf lock", __func__);
-    WriteStringToFile("40", "/dev/stune/top-app/schedtune.boost", false);
-    WriteStringToFile("676000", "/sys/class/devfreq/17000010.devfreq_mif/scaling_devfreq_min", false);
-    WriteStringToFile("267000", "/sys/class/devfreq/17000020.devfreq_int/scaling_devfreq_min", false);
 }
 
 void InteractionHandler::PerfRel() {
     ALOGV("%s: releasing perf lock", __func__);
-    WriteStringToFile("20", "/dev/stune/top-app/schedtune.boost", false);
-    WriteStringToFile("421000", "/sys/class/devfreq/17000010.devfreq_mif/scaling_devfreq_min", false);
-    WriteStringToFile("107000", "/sys/class/devfreq/17000020.devfreq_int/scaling_devfreq_min", false);
 }
 
 long long InteractionHandler::CalcTimespecDiffMs(struct timespec start,
