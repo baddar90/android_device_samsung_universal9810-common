@@ -63,10 +63,12 @@ void InteractionHandler::Exit() {
 
 void InteractionHandler::PerfLock() {
     ALOGV("%s: acquiring perf lock", __func__);
+    WriteStringToFile("858000", "/sys/power/cpufreq_min_limit", false);
 }
 
 void InteractionHandler::PerfRel() {
     ALOGV("%s: releasing perf lock", __func__);
+    WriteStringToFile("113750", "/sys/power/cpufreq_min_limit", false);
 }
 
 long long InteractionHandler::CalcTimespecDiffMs(struct timespec start,
