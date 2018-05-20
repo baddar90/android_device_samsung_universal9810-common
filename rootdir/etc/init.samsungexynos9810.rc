@@ -749,12 +749,6 @@ on fs
 # ARGOSD network_throughput
     chown system system /dev/network_throughput
 
-# ARGOSD
-service argos-daemon /vendor/bin/argosd
-    class main
-    user system
-    group system radio
-
 on property:ro.bootmode=charger
     mount ext4 /dev/block/platform/11120000.ufs/by-name/SYSTEM /system wait ro
     wait /dev/block/platform/11120000.ufs/by-name/EFS
@@ -779,3 +773,18 @@ on property:sys.boot_completed=1
     write /sys/block/sda/queue/iostats 1
     write /sys/block/sda/queue/read_ahead_kb 256
     write /sys/block/sda/queue/nr_requests 128
+
+service ExynosHWCServiceTW /system/bin/true
+    disabled
+
+service SMD-daemon /system/bin/true
+    disabled
+
+service BCS-daemon /system/bin/true
+    disabled
+
+service DR-daemon /system/bin/true
+    disabled
+
+service at_distributor /system/bin/true
+    disabled
