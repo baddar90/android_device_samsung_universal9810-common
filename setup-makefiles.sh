@@ -31,9 +31,6 @@ write_headers "$DEVICE"
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
-# VNDK compat layer
-write_makefiles "$MY_DIR"/proprietary-files-vndk.txt true
-
 # Offline charging
 write_makefiles "$MY_DIR"/proprietary-files-lpm.txt true
 
