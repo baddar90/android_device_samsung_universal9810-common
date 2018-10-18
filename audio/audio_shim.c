@@ -5,7 +5,7 @@
 
 int audioFeature_getEnable(int feature)
 {
-    if (feature == 9)
+    if (feature == 8)
         return 1;
     return 0;
 }
