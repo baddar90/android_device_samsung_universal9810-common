@@ -81,9 +81,6 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Ramdisk
 BOARD_ROOT_EXTRA_FOLDERS := efs
 
-# Extended Filesystem Support
-TARGET_EXFAT_DRIVER := sdfat
-
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/recovery.fstab
