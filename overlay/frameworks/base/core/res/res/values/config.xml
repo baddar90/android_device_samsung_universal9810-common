@@ -269,6 +269,11 @@ Add a comment to this line
     <integer-array name="config_keyboardTapVibePattern">
         <item>7</item>
     </integer-array>
+    
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
