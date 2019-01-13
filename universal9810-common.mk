@@ -89,6 +89,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
+# Trust HAL
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.9810
