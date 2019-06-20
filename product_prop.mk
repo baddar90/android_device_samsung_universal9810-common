@@ -16,6 +16,11 @@
 
 # Device specific property overrides
 
+# Surfaceflinger
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.sf.latch_unsignaled=1
+
+# Tones
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=Orion.ogg \
     ro.config.notification_sound=Argon.ogg \
