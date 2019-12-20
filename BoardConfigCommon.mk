@@ -109,6 +109,7 @@ endif
 
 # VNDK
 BOARD_VNDK_VERSION := current
+PRODUCT_TARGET_VNDK_VERSION := 29
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
