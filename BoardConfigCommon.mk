@@ -3,6 +3,9 @@
 
 COMMON_PATH := device/samsung/universal9810-common
 
+# Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5

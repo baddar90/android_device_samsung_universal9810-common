@@ -99,10 +99,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio_keys.kl:system/usr/keylayout/gpio_keys.kl
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Property overrides
 -include $(LOCAL_PATH)/system_prop.mk
 
