@@ -1,10 +1,22 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright (C) 2019 The LineageOS Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 #define LOG_TAG "android.hardware.vibrator@1.0-service.9810"
 
+#include <android-base/logging.h>
 #include <android/hardware/vibrator/1.0/IVibrator.h>
 #include <hidl/HidlSupport.h>
 #include <hidl/HidlTransportSupport.h>
@@ -17,38 +29,36 @@ using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 using android::hardware::vibrator::V1_0::IVibrator;
 using android::hardware::vibrator::V1_0::implementation::Vibrator;
-using namespace android;
 
-static const char *ENABLE_PATH = "/sys/class/timed_output/vibrator/enable";
-static const char *HAPTIC_PATH = "/sys/class/timed_output/vibrator/haptic_engine";
-
-status_t registerVibratorService() {
-    std::ofstream enable{ENABLE_PATH};
-    if (!enable) {
-        int error = errno;
-        ALOGE("Failed to open %s (%d): %s", ENABLE_PATH, error, strerror(error));
-        return -error;
-    }
-
-    std::ofstream haptic{HAPTIC_PATH};
-    if (!haptic) {
-        int error = errno;
-        ALOGE("Failed to open %s (%d): %s", HAPTIC_PATH, error, strerror(error));
-        return -error;
-    }
-
-    sp<IVibrator> vibrator = new Vibrator(std::move(enable), std::move(haptic));
-    vibrator->registerAsService();
-    return OK;
-}
+using android::OK;
+using android::sp;
+using android::status_t;
 
 int main() {
-    configureRpcThreadpool(1, true);
-    status_t status = registerVibratorService();
+    status_t status;
+    sp<IVibrator> vibrator;
 
-    if (status != OK) {
-        return status;
+    LOG(INFO) << "Vibrator HAL service is starting.";
+
+    vibrator = new Vibrator();
+    if (vibrator == nullptr) {
+        LOG(ERROR) << "Can not create an instance of Vibrator HAL IVibrator, exiting.";
+        goto shutdown;
     }
 
+    configureRpcThreadpool(1, true);
+
+    status = vibrator->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for Vibrator HAL";
+        goto shutdown;
+    }
+
+    LOG(INFO) << "Vibrator HAL service is Ready.";
     joinRpcThreadpool();
+
+shutdown:
+    // In normal operation, we don't expect the thread pool to shutdown
+    LOG(ERROR) << "Vibrator HAL failed to join thread pool.";
+    return 1;
 }

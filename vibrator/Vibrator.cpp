@@ -1,11 +1,24 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright (C) 2019 The LineageOS Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 #define LOG_TAG "android.hardware.vibrator@1.0-service.9810"
 
 #include <log/log.h>
+
+#include <android-base/stringprintf.h>
 
 #include <hardware/hardware.h>
 #include <hardware/vibrator.h>
@@ -14,8 +27,8 @@
 
 #include <cinttypes>
 #include <cmath>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 namespace android {
 namespace hardware {
@@ -23,22 +36,26 @@ namespace vibrator {
 namespace V1_0 {
 namespace implementation {
 
-Vibrator::Vibrator(std::ofstream&& enable, std::ofstream&& haptic) :
-    mEnable(std::move(enable)),
-    mHaptic(std::move(haptic)) {
+/*
+ * Write value to path and close file.
+ */
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value << std::endl;
+}
+
+Vibrator::Vibrator() {
     mIntensity = 10000;
 }
 
 // SEC Haptic Engine
 Return<Status> Vibrator::doHaptic(int timeout, int intensity, int freq, int overdrive) {
-    char haptic[32];
-    snprintf(haptic, sizeof(haptic) - 1, "4 %d %d %d %d", timeout, intensity, freq, overdrive);
-    mHaptic << haptic << std::endl;
-    mEnable << 1 << std::endl;
-    if (!mEnable) {
-        ALOGE("Failed to turn vibrator on (%d): %s", errno, strerror(errno));
-        return Status::UNKNOWN_ERROR;
-    }
+    std::string haptic =
+            android::base::StringPrintf("4 %d %d %d %d", timeout, intensity, freq, overdrive);
+    set("/sys/class/timed_output/vibrator/haptic_engine", haptic);
+    set("/sys/class/timed_output/vibrator/enable", 1);
+
     return Status::OK;
 }
 
@@ -47,16 +64,12 @@ Return<Status> Vibrator::on(uint32_t timeout_ms) {
     return doHaptic(timeout_ms, mIntensity, 0, 0);
 }
 
-Return<Status> Vibrator::off()  {
-    mEnable << 0 << std::endl;
-    if (!mEnable) {
-        ALOGE("Failed to turn vibrator off (%d): %s", errno, strerror(errno));
-        return Status::UNKNOWN_ERROR;
-    }
+Return<Status> Vibrator::off() {
+    set("/sys/class/timed_output/vibrator/enable", 0);
     return Status::OK;
 }
 
-Return<bool> Vibrator::supportsAmplitudeControl()  {
+Return<bool> Vibrator::supportsAmplitudeControl() {
     return true;
 }
 
