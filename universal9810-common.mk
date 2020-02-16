@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Init
+PRODUCT_PACKAGES += \
+    init.samsung.rc
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service.samsung-exynos
