@@ -40,15 +40,6 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 
-# Init
-PRODUCT_PACKAGES += \
-    fstab.samsungexynos9810 \
-    init.samsung.rc \
-    init.samsungexynos9810.rc \
-    init.samsungexynos9810.usb.rc \
-    init.baseband.rc \
-    ueventd.samsungexynos9810.rc
-
 # SP-NDK
 PRODUCT_PACKAGES += \
     libvulkan
