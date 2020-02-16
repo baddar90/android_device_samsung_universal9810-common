@@ -1,3 +1,6 @@
+service seh-light-hal-3-0 /system/bin/true
+    disabled
+
 service vendor.light-hal-2-0 /system/bin/hw/android.hardware.light@2.0-service.9810
     interface android.hardware.light@2.0::ILight default
     class hal
