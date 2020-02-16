@@ -93,10 +93,6 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
 endif
 
-# Android Verified Boot
-BOARD_AVB_ENABLE := false
-BOARD_BUILD_DISABLED_VBMETAIMAGE := true
-
 # VNDK
 BOARD_VNDK_VERSION := current
 
