@@ -49,10 +49,6 @@ PRODUCT_PACKAGES += \
     init.baseband.rc \
     ueventd.samsungexynos9810.rc
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vndk-compat/vndk-compat.rc:system/etc/init/vndk-compat.rc
-
 # SP-NDK
 PRODUCT_PACKAGES += \
     libvulkan
