@@ -73,12 +73,13 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0-impl \
-    com.android.nfc_extras \
     libnfc-nci \
     libnfc_nci_jni \
     NfcNci \
     Tag
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
 
 # SamsungDoze
 PRODUCT_PACKAGES += \
