@@ -1,0 +1,4 @@
+# Lights
+genfscon sysfs /class/sec/led/led_blink                   u:object_r:sysfs_leds:s0
+genfscon sysfs /class/backlight/panel/brightness          u:object_r:sysfs_leds:s0
+genfscon sysfs /class/backlight/panel/max_brightness      u:object_r:sysfs_leds:s0
