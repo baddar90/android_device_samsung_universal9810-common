@@ -1,0 +1,2 @@
+type livedisplay_data_file, data_file_type, file_type;
+type sysfs_lcd_writable, sysfs_type, fs_type;
