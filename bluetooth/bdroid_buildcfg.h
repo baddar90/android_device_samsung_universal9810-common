@@ -18,7 +18,26 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Samsung Galaxy"
+#include <cutils/properties.h>
+#include <string.h>
+
+static inline const char* BtmGetDefaultName()
+{
+    char product_device[PROPERTY_VALUE_MAX];
+    property_get("ro.product.device", product_device, "");
+    
+    if (strstr(product_device, "starlte"))
+        return "Galaxy S9";
+    if (strstr(product_device, "star2lte"))
+        return "Galaxy S9+";
+    if (strstr(product_device, "crownlte"))
+        return "Galaxy Note 9";
+    
+    // Fallback to Default
+    return "Samsung Galaxy";
+}
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 
 #define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
 #define BTIF_HF_WBS_PREFERRED FALSE /* Don't prefer WBS    */
