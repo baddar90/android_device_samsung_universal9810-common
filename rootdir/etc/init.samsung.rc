@@ -4,3 +4,10 @@ on init
 
     # Set SunlightEnhancement sysnode owner
     chown system system /sys/class/mdnie/mdnie/lux
+
+# LPM
+service lpm /system/bin/lpm
+    class sec-charger
+    user root
+    group system radio input
+    critical
