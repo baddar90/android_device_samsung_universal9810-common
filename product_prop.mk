@@ -20,6 +20,10 @@
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.latch_unsignaled=1
 
+# Telephony
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.telephony.default_network=10,10
+
 # Tones
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=Orion.ogg \
