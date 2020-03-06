@@ -11,3 +11,9 @@ service lpm /system/bin/lpm
     user root
     group system radio input
     critical
+
+service argos-daemon /system/bin/true
+    disabled
+
+service ExynosHWCServiceTW /system/bin/true
+    disabled
