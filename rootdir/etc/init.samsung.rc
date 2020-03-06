@@ -12,6 +12,16 @@ service lpm /system/bin/lpm
     group system radio input
     critical
 
+on late-fs
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
+
+on property:sys.boot_completed=1
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sda/queue/read_ahead_kb 256
+    write /sys/block/sda/queue/nr_requests 128
+
 service argos-daemon /system/bin/true
     disabled
 
