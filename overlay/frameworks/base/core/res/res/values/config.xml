@@ -300,9 +300,6 @@ Add a comment to this line
     <!-- Our modem doesn't support this query yet -->
     <string name="config_radio_access_family">GSM|WCDMA|LTE</string>
 
-    <!-- The device supports freeform window management -->
-    <bool name="config_freeformWindowManagement">true</bool>
-
     <!-- Flag indicating whether strict threshold is used, or lenient threshold is used,
             when evaluating RSRP for LTE antenna bar display
            0. Strict threshold
