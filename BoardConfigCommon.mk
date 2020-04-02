@@ -85,24 +85,7 @@ TARGET_EXFAT_DRIVER := sdfat
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/etc/recovery.fstab
-
-# Recovery (TWRP)
-ifeq ($(RECOVERY_VARIANT),twrp)
-RECOVERY_SDCARD_ON_DATA := true
-TW_THEME := portrait_hdpi
-TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-TW_MAX_BRIGHTNESS := 25500
-TW_DEFAULT_BRIGHTNESS := 12800
-TW_NO_REBOOT_BOOTLOADER := true
-TW_HAS_DOWNLOAD_MODE := true
-TW_INCLUDE_NTFS_3G := true
-TW_EXCLUDE_SUPERSU := true
-TW_EXTRA_LANGUAGES := true
-TW_USE_NEW_MINADBD := true
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_FBE := true
-endif
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/recovery.fstab
 
 # VNDK
 BOARD_VNDK_VERSION := current
