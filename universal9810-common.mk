@@ -56,7 +56,8 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.samsung.rc
+    init.samsung.rc \
+    init.usb_accessory.rc
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
