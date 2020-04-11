@@ -85,6 +85,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.samsungexynos9810.rc
+
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze
