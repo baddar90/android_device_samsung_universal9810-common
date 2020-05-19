@@ -12,6 +12,10 @@ service lpm /system/bin/lpm
     group system radio input
     critical
 
+# Vibrator
+    chown system system /sys/class/timed_output/vibrator/enable
+    chown system system /sys/class/timed_output/vibrator/intensity
+
 on late-fs
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sda/queue/read_ahead_kb 2048
