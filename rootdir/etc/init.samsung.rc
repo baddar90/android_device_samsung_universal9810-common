@@ -5,18 +5,18 @@ on init
     # Set SunlightEnhancement sysnode owner
     chown system system /sys/class/mdnie/mdnie/lux
 
+    # Vibrator
+    chown system system /sys/class/timed_output/vibrator/enable
+    chown system system /sys/class/timed_output/vibrator/intensity
+    chown system system /sys/class/timed_output/vibrator/force_touch_intensity
+    write /sys/class/timed_output/vibrator/force_touch_intensity 10000
+
 # LPM
 service lpm /system/bin/lpm
     class sec-charger
     user root
     group system radio input
     critical
-
-# Vibrator
-    chown system system /sys/class/timed_output/vibrator/enable
-    chown system system /sys/class/timed_output/vibrator/intensity
-    chown system system /sys/class/timed_output/vibrator/force_touch_intensity
-    write /sys/class/timed_output/vibrator/force_touch_intensity 10000
 
 on late-fs
     write /sys/block/sda/queue/iostats 0
