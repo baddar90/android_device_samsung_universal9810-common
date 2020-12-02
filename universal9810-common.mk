@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.samsung-exynos
+    lineage.livedisplay@2.0-service.9810
 
 # Recovery
 PRODUCT_PACKAGES += \
