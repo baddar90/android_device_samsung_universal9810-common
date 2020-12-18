@@ -35,3 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.cscsupported=1 \
     ro.cmc.device_type=pd \
     ro.cmc.version=2.0
+
+# Zygote Preforking
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device.config.runtime_native.uasp_pool_enabled=true \
