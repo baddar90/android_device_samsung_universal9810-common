@@ -17,6 +17,9 @@ on init
     chmod 0666 /sys/kernel/gpu/gpu_max_clock
     chmod 0666 /sys/kernel/gpu/gpu_min_clock
 
+    # FastCharge
+    chown system system /sys/class/sec/switch/afc_disable
+
 # Charger
 service charger /system/bin/charger
     class sec-charger
