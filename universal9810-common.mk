@@ -72,10 +72,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
@@ -89,14 +85,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.9810
-
-# Touch
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.9810
 
 # Lights
 PRODUCT_COPY_FILES += \
