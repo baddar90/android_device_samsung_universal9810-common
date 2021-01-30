@@ -89,6 +89,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/hidl/vibrator/vendor.samsung.hardware.vibrator@2.1-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/bin/hw/vendor.samsung.hardware.vibrator@2.1-service \
     $(LOCAL_PATH)/hidl/vibrator/vendor.samsung.hardware.vibrator@2.1-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.vibrator@2.1-service.rc
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/hidl/sensors/lib/android.hardware.sensors@1.0-impl.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib/hw/android.hardware.sensors@1.0-impl.so \
+    $(LOCAL_PATH)/hidl/sensors/lib64/android.hardware.sensors@1.0-impl.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib64/hw/android.hardware.sensors@1.0-impl.so
+
 # Power
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/hidl/power/android.hardware.power@1.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/android.hardware.power@1.0-service.rc \
