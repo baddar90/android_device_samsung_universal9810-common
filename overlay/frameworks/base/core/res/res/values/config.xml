@@ -122,6 +122,10 @@
     <!-- ### DISPLAY                                                    -->
     <!-- ############################################################## -->
 
+    <!-- The type of the light sensor to be used by the display framework for things like
+         auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
+    <string name="config_displayLightSensorType">android.sensor.light</string>
+
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
 
