@@ -5,6 +5,9 @@
 # Lights HAL
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/vendor\.samsung\.hardware\.light@3\.0-service	u:object_r:hal_light_default_exec:s0
 
+# Vibrator HAL
+/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/vendor\.samsung\.hardware\.vibrator@2\.1-service	u:object_r:hal_vibrator_default_exec:s0
+
 # Power HAL
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.power@1\.3-service\.samsung-libperfmgr    u:object_r:hal_power_default_exec:s0
 /dev/cpu_dma_latency                         u:object_r:cpu_dma_device:s0
