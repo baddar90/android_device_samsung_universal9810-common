@@ -102,10 +102,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.fastcharge@1.0-service.9810
 
-# Lights
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hidl/lights/vendor.samsung.hardware.light@3.0-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/bin/hw/vendor.samsung.hardware.light@3.0-service \
-    $(LOCAL_PATH)/hidl/lights/vendor.samsung.hardware.light@3.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.light@3.0-service.rc
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.9810
 
 # Vibrator
 PRODUCT_COPY_FILES += \
