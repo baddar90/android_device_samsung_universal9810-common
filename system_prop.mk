@@ -37,9 +37,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cmc.version=2.0
 
 # ADB on boot
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
-    persist.sys.usb.config=mtp,adb \
-    ro.debuggable=1 \
-    ro.adb.secure=0
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.service.adb.enable=1 \
+#    persist.service.debuggable=1 \
+#    persist.sys.usb.config=mtp,adb \
+#    ro.debuggable=1 \
+#    ro.adb.secure=0
