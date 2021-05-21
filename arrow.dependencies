@@ -1,8 +1,0 @@
-[
-    {
-        "repository": "baddar90/android_kernel_samsung_amazing9810",
-        "target_path": "kernel/samsung/universal9810",
-        "remote": "github",
-        "revision": "arrow-11.0"
-    }
-]
