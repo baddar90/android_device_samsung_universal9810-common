@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# Descendant
+PRODUCT_BOARD_PLATFORM := exynos9810
+TARGET_SUPPORTS_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORT := YES
+
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # VNDK
