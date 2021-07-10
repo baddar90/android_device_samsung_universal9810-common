@@ -16,6 +16,8 @@
 
 COMMON_PATH := device/samsung/universal9810-common
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Include
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
