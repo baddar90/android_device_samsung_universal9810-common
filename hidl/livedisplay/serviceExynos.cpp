@@ -15,9 +15,9 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-service.9810"
+#define LOG_TAG "lineage.livedisplay@2.0-service.samsung-exynos"
 #else
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.9810"
+#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.samsung-exynos"
 #endif
 
 #include <android-base/logging.h>

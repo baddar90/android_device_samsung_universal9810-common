@@ -92,7 +92,7 @@ PRODUCT_COPY_FILES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.9810
+    lineage.livedisplay@2.0-service.samsung-exynos
 
 # Touch
 PRODUCT_PACKAGES += \
