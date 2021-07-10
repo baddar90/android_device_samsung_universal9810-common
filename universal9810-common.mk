@@ -98,10 +98,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.touch@1.0-service.9810
 
-# FastCharge
-PRODUCT_PACKAGES += \
-    lineage.fastcharge@1.0-service.9810
-
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.9810
