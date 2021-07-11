@@ -39,3 +39,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Zygote Preforking
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device.config.runtime_native.uasp_pool_enabled=true \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    ro.control_privapp_permissions=log
