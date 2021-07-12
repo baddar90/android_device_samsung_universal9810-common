@@ -19,7 +19,8 @@
                 "1248000",
                 "1053000",
                 "832000",
-                "455000"
+                "455000",
+                "208000"
             ],
             "ResetOnInit": true
         },
@@ -44,7 +45,8 @@
                 "1261000",
                 "1066000",
                 "858000",
-                "650000"
+                "650000",
+                "598000"
             ],
             "ResetOnInit": true
         },
@@ -67,15 +69,6 @@
                 "338000",
                 "299000",
                 "260000"
-            ],
-            "ResetOnInit": true
-        },
-		{
-            "Name": "TASchedtuneBoost",
-            "Path": "/dev/stune/top-app/schedtune.boost",
-            "Values": [
-                "30",
-                "5"
             ],
             "ResetOnInit": true
         },
@@ -131,12 +124,6 @@
         }
     ],
     "Actions": [
-	{
-            "PowerHint": "INTERACTION",
-            "Node": "TASchedtuneBoost",
-            "Duration": 0,
-            "Value": "30"
-        },
         {
             "PowerHint": "LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
