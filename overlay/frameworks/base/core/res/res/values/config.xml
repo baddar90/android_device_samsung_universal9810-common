@@ -415,9 +415,15 @@
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
         <item>restart</item>
+        <item>recovery</item>
         <item>lockdown</item>
         <item>logout</item>
         <item>screenshot</item>
+        <item>torch</item>
+        <item>airplane</item>
+        <item>settings</item>
+        <item>users</item>
+        <item>silent</item>
     </string-array>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
