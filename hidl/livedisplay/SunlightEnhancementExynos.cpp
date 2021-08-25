@@ -28,18 +28,18 @@ using android::base::WriteStringToFile;
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 static constexpr const char* kLUXPath = "/sys/class/mdnie/mdnie/lux";
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement follow.
 bool SunlightEnhancementExynos::isSupported() {
     std::fstream file(kLUXPath, file.in | file.out);
     return file.good();
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IAdaptiveBacklight follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::IAdaptiveBacklight follow.
 Return<bool> SunlightEnhancementExynos::isEnabled() {
     std::string tmp;
     int32_t contents = 0;
@@ -57,7 +57,7 @@ Return<bool> SunlightEnhancementExynos::setEnabled(bool enabled) {
 }
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

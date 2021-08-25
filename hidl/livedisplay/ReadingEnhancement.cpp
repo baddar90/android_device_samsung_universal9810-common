@@ -28,18 +28,18 @@ using android::base::WriteStringToFile;
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 static constexpr const char* kREPath = "/sys/class/mdnie/mdnie/accessibility";
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement follow.
 bool ReadingEnhancement::isSupported() {
     std::fstream re(kREPath, re.in | re.out);
     return re.good();
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IReadingEnhancement follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::IReadingEnhancement follow.
 Return<bool> ReadingEnhancement::isEnabled() {
     std::string contents;
 
@@ -57,7 +57,7 @@ Return<bool> ReadingEnhancement::setEnabled(bool enabled) {
 // Methods from ::android::hidl::base::V1_0::IBase follow.
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

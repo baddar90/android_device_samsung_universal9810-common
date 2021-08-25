@@ -13,7 +13,7 @@
 /dev/cpu_dma_latency                         u:object_r:cpu_dma_device:s0
 
 # LiveDisplay HAL
-/system/bin/hw/lineage\.livedisplay@2\.0-service\.9810    u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
+/system/bin/hw/lineage\.livedisplay@2\.1-service\.9810    u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
 /data/misc/display(/.*)?      u:object_r:display_misc_file:s0
 
 # Touch HAL

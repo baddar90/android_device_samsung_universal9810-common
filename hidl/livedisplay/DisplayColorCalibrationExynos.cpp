@@ -29,7 +29,7 @@ using android::base::WriteStringToFile;
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 static constexpr const char* kColorPath = "/sys/class/mdnie/mdnie/sensorRGB";
@@ -71,7 +71,7 @@ Return<bool> DisplayColorCalibrationExynos::setCalibration(const hidl_vec<int32_
 }
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

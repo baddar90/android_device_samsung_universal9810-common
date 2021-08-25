@@ -28,7 +28,7 @@ using android::base::WriteStringToFile;
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 static constexpr const char* kBacklightPath = "/sys/class/lcd/panel/alpm";
@@ -38,7 +38,7 @@ bool AdaptiveBacklight::isSupported() {
     return backlight.good();
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IAdaptiveBacklight follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::IAdaptiveBacklight follow.
 Return<bool> AdaptiveBacklight::isEnabled() {
     std::string tmp;
     int32_t contents = 0;
@@ -55,7 +55,7 @@ Return<bool> AdaptiveBacklight::setEnabled(bool enabled) {
 }
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
