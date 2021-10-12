@@ -38,8 +38,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Tones
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=The_big_adventure.ogg \
-    ro.config.notification_sound=Duet.ogg \
-    ro.config.alarm_alert=Gentle_breeze.ogg \
-    ro.config.vc_call_vol_steps=7
+#PRODUCT_PRODUCT_PROPERTIES += \
+#    ro.config.ringtone=The_big_adventure.ogg \
+#    ro.config.notification_sound=Duet.ogg \
+#    ro.config.alarm_alert=Gentle_breeze.ogg \
+#    ro.config.vc_call_vol_steps=7
