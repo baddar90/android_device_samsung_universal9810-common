@@ -15,6 +15,9 @@ ro.vendor.cscsupported=1
 ro.cmc.device_type=pd
 ro.cmc.version=2.0
 
+# API
+ro.product.first_api_level=29
+
 # ADB on boot
 #persist.service.adb.enable=1
 #persist.service.debuggable=1
