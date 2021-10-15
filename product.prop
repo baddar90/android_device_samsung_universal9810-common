@@ -1,0 +1,16 @@
+# Surfaceflinger
+debug.sf.latch_unsignaled=1
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
+# Telephony
+ro.telephony.default_network=10,10
+
+# Bluetooth
+ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.a2dp_offload.disabled=true
+vendor.audio.feature.a2dp_offload.enable=false
+
+# Process pool
+persist.device_config.runtime_native.usap_pool_enabled=true
