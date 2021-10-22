@@ -21,6 +21,9 @@ ro.product.first_api_level=29
 # One handed mode
 ro.support_one_handed_mode=true
 
+# System
+persist.sys.binary_xml=false
+
 # ADB on boot
 #persist.service.adb.enable=1
 #persist.service.debuggable=1
