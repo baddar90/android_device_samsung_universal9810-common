@@ -1,3 +1,6 @@
+# BT
+bluetooth.samsung_samplerate.supported=true
+
 # Samsung Stuff
 ro.product_ship=true
 config.disable_consumerir=true
