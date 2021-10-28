@@ -83,6 +83,9 @@
     -->
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <!-- Whether device supports wifi ap mac randomization -->
+    <bool name="config_wifi_ap_randomization_supported">false</bool>
+
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
