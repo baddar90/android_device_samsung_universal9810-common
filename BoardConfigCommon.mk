@@ -110,5 +110,10 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
+# Wifi
+WIFI_HIDL_FEATURE_AWARE          := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+
 # Inherit from the proprietary version
 -include vendor/samsung/universal9810-common/BoardConfigVendor.mk
