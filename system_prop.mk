@@ -36,6 +36,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cmc.device_type=pd \
     ro.cmc.version=2.0
 
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.direct.interface=p2p0
+
 # ADB on boot
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    persist.service.adb.enable=1 \
