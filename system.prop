@@ -30,6 +30,9 @@ ro.support_one_handed_mode=true
 # System
 persist.sys.binary_xml=false
 
+# Wifi
+wifi.direct.interface=p2p0
+
 # ADB on boot
 #persist.service.adb.enable=1
 #persist.service.debuggable=1
