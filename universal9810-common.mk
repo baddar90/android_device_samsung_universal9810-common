@@ -57,6 +57,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/audio_policy_configuration.xml
 
+# Wifi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wpa_supplicant.conf:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/wifi/p2p_supplicant_overlay.conf
+
 # SP-NDK
 PRODUCT_PACKAGES += \
     libvulkan
