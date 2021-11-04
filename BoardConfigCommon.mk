@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_DUP_SYSPROP := true
 
 COMMON_PATH := device/samsung/universal9810-common
 
