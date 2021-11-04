@@ -123,9 +123,5 @@ PRODUCT_COPY_FILES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
-# Property overrides
--include $(LOCAL_PATH)/product_prop.mk
--include $(LOCAL_PATH)/system_prop.mk
-
 # Call proprietary blob setup
 $(call inherit-product, vendor/samsung/universal9810-common/universal9810-common-vendor.mk)
