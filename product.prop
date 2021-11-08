@@ -18,3 +18,6 @@ persist.device_config.runtime_native.usap_pool_enabled=true
 
 # API 
 ro.product.first_api_level=29
+
+# Disable priv-app permissions
+ro.control_privapp_permissions=disable
