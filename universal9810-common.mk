@@ -107,10 +107,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/hidl/power/libperfmgr.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib64/libperfmgr.so \
     $(LOCAL_PATH)/hidl/power/powerhint.json:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/powerhint.json
 
-# Ringtones
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/audio/ringtones/Xylophone_Dubstep.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Xylophone_Dubstep.ogg
-
 # S-Pen
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/samsung-sec_e-pen.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/sec_e-pen.idc
