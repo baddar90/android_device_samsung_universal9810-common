@@ -84,6 +84,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Graphics
 TARGET_USES_HWC2 := true
+TARGET_USES_DRM_PP := true
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
